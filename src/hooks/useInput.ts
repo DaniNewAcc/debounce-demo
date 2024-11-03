@@ -16,7 +16,6 @@ export function useInput(defaultValue: string) {
   return {
     value: inputValue,
     isEdited,
-    setInputValue,
     handleInputChange,
     handleInputBlur
   };

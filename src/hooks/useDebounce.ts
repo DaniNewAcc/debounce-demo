@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-type useDebounceProps = {
-    initialValue: string;
-    delay: number 
-}
-
-export default function useDebounce({ initialValue, delay }: useDebounceProps) {
-    const [debounceValue, setDebounceValue] = useState("");
+export default function useDebounce(initialValue: string, delay: number) {
+    const [debounceValue, setDebounceValue] = useState(initialValue);
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
     useEffect(() => {
